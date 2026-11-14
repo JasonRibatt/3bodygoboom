@@ -1,0 +1,404 @@
+{
+ "rows": [
+  {
+   "feature_set": "fs1_ic",
+   "model": "logreg",
+   "n_test": 1776,
+   "test_acc": 0.8277,
+   "test_macro_f1": 0.8325,
+   "block_ES_acc": 0.9793,
+   "block_EC_acc": 0.5718,
+   "heldout_acc": 0.7355,
+   "heldout_macro_f1": 0.7817,
+   "hyperparams": {
+    "C": 10,
+    "class_weight": "balanced"
+   }
+  },
+  {
+   "feature_set": "fs1_ic",
+   "model": "mlp",
+   "n_test": 1776,
+   "test_acc": 0.8559,
+   "test_macro_f1": 0.8478,
+   "block_ES_acc": 0.9966,
+   "block_EC_acc": 0.5718,
+   "heldout_acc": 0.7424,
+   "heldout_macro_f1": 0.7839,
+   "hyperparams": {
+    "hidden": [
+     64,
+     64
+    ],
+    "dropout": 0.3,
+    "weight_decay": 0.0001,
+    "lr": 0.001,
+    "best_epoch": 56
+   }
+  },
+  {
+   "feature_set": "fs2_ic_conserved",
+   "model": "logreg",
+   "n_test": 1776,
+   "test_acc": 0.8401,
+   "test_macro_f1": 0.8414,
+   "block_ES_acc": 0.9966,
+   "block_EC_acc": 0.5926,
+   "heldout_acc": 0.7548,
+   "heldout_macro_f1": 0.8018,
+   "hyperparams": {
+    "C": 1,
+    "class_weight": "balanced"
+   }
+  },
+  {
+   "feature_set": "fs2_ic_conserved",
+   "model": "mlp",
+   "n_test": 1776,
+   "test_acc": 0.857,
+   "test_macro_f1": 0.8516,
+   "block_ES_acc": 1.0,
+   "block_EC_acc": 0.5833,
+   "heldout_acc": 0.7507,
+   "heldout_macro_f1": 0.7936,
+   "hyperparams": {
+    "hidden": [
+     256,
+     128,
+     64
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.0001,
+    "lr": 0.001,
+    "best_epoch": 4
+   }
+  },
+  {
+   "feature_set": "fs3_early_traj",
+   "model": "logreg",
+   "n_test": 1599,
+   "test_acc": 0.7323,
+   "test_macro_f1": 0.7043,
+   "block_ES_acc": 0.7759,
+   "block_EC_acc": 0.6319,
+   "heldout_acc": 0.6997,
+   "heldout_macro_f1": 0.6709,
+   "hyperparams": {
+    "C": 100,
+    "class_weight": "balanced"
+   }
+  },
+  {
+   "feature_set": "fs3_early_traj",
+   "model": "mlp",
+   "n_test": 1599,
+   "test_acc": 0.8662,
+   "test_macro_f1": 0.8019,
+   "block_ES_acc": 0.9241,
+   "block_EC_acc": 0.681,
+   "heldout_acc": 0.7955,
+   "heldout_macro_f1": 0.7388,
+   "hyperparams": {
+    "hidden": [
+     256,
+     128,
+     64
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "lr": 0.001,
+    "best_epoch": 26
+   }
+  },
+  {
+   "feature_set": "fs4_ic_late_state",
+   "model": "logreg",
+   "n_test": 1544,
+   "test_acc": 0.8109,
+   "test_macro_f1": 0.7639,
+   "block_ES_acc": 0.9793,
+   "block_EC_acc": 0.5033,
+   "heldout_acc": 0.7357,
+   "heldout_macro_f1": 0.7441,
+   "hyperparams": {
+    "C": 100,
+    "class_weight": "balanced"
+   }
+  },
+  {
+   "feature_set": "fs4_ic_late_state",
+   "model": "mlp",
+   "n_test": 1544,
+   "test_acc": 0.9028,
+   "test_macro_f1": 0.8184,
+   "block_ES_acc": 0.9586,
+   "block_EC_acc": 0.7303,
+   "heldout_acc": 0.8418,
+   "heldout_macro_f1": 0.798,
+   "hyperparams": {
+    "hidden": [
+     128,
+     128
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "lr": 0.001,
+    "best_epoch": 41
+   }
+  }
+ ],
+ "ic_models_on_traj_subsets": {
+  "fs3_early_traj": {
+   "test": {
+    "fs1_ic": {
+     "logreg": {
+      "acc": 0.8093,
+      "f1": 0.768
+     },
+     "mlp": {
+      "acc": 0.8443,
+      "f1": 0.7723
+     }
+    },
+    "fs2_ic_conserved": {
+     "logreg": {
+      "acc": 0.823,
+      "f1": 0.7743
+     },
+     "mlp": {
+      "acc": 0.8449,
+      "f1": 0.7822
+     }
+    }
+   },
+   "heldout_block": {
+    "fs1_ic": {
+     "logreg": {
+      "acc": 0.6964,
+      "f1": 0.7271
+     },
+     "mlp": {
+      "acc": 0.7224,
+      "f1": 0.7178
+     }
+    },
+    "fs2_ic_conserved": {
+     "logreg": {
+      "acc": 0.7159,
+      "f1": 0.7465
+     },
+     "mlp": {
+      "acc": 0.7256,
+      "f1": 0.7275
+     }
+    }
+   }
+  },
+  "fs4_ic_late_state": {
+   "test": {
+    "fs1_ic": {
+     "logreg": {
+      "acc": 0.8038,
+      "f1": 0.7306
+     },
+     "mlp": {
+      "acc": 0.8433,
+      "f1": 0.7261
+     }
+    },
+    "fs2_ic_conserved": {
+     "logreg": {
+      "acc": 0.818,
+      "f1": 0.7337
+     },
+     "mlp": {
+      "acc": 0.842,
+      "f1": 0.7371
+     }
+    }
+   },
+   "heldout_block": {
+    "fs1_ic": {
+     "logreg": {
+      "acc": 0.6886,
+      "f1": 0.7091
+     },
+     "mlp": {
+      "acc": 0.7222,
+      "f1": 0.6973
+     }
+    },
+    "fs2_ic_conserved": {
+     "logreg": {
+      "acc": 0.7071,
+      "f1": 0.7271
+     },
+     "mlp": {
+      "acc": 0.7205,
+      "f1": 0.7017
+     }
+    }
+   }
+  }
+ },
+ "split_sizes": {
+  "fs1_ic": {
+   "train": 8285,
+   "val": 1775,
+   "test": 1776,
+   "heldout_block": 722,
+   "unresolved": 3067
+  },
+  "fs2_ic_conserved": {
+   "train": 8285,
+   "val": 1775,
+   "test": 1776,
+   "heldout_block": 722,
+   "unresolved": 3067
+  },
+  "fs3_early_traj": {
+   "train": 7543,
+   "val": 1595,
+   "test": 1599,
+   "heldout_block": 616,
+   "unresolved": 3067
+  },
+  "fs4_ic_late_state": {
+   "train": 7264,
+   "val": 1539,
+   "test": 1544,
+   "heldout_block": 594,
+   "unresolved": 3067
+  }
+ },
+ "rows_dropped_nonfinite": {
+  "fs1_ic": {
+   "train": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   },
+   "val": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   },
+   "test": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   },
+   "heldout_block": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   },
+   "unresolved": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   }
+  },
+  "fs2_ic_conserved": {
+   "train": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   },
+   "val": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   },
+   "test": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   },
+   "heldout_block": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   },
+   "unresolved": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   }
+  },
+  "fs3_early_traj": {
+   "train": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 742,
+    "Unresolved": 0
+   },
+   "val": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 180,
+    "Unresolved": 0
+   },
+   "test": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 177,
+    "Unresolved": 0
+   },
+   "heldout_block": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 106,
+    "Unresolved": 0
+   },
+   "unresolved": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   }
+  },
+  "fs4_ic_late_state": {
+   "train": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 1021,
+    "Unresolved": 0
+   },
+   "val": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 236,
+    "Unresolved": 0
+   },
+   "test": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 232,
+    "Unresolved": 0
+   },
+   "heldout_block": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 128,
+    "Unresolved": 0
+   },
+   "unresolved": {
+    "Ejection": 0,
+    "Stable Hierarchical": 0,
+    "Collision": 0,
+    "Unresolved": 0
+   }
+  }
+ }
+}
