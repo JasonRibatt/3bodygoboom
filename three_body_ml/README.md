@@ -1,3 +1,9 @@
+# Three-body outcome classification
+
+**Current: run 2** (Survived labels, off-grid standard + K=5 ensemble test sets). See `RESULTS_run2.md`.
+Put Jonah's `data_run2` files in `data/run2/`, then: `python train.py` → `python evaluate.py` → `python plots_run2.py`.
+Outputs go to `outputs/run2/`. The pilot results below are kept for reference (`outputs/` top level, `common_pilot.py`).
+
 # Three-body outcome classification — pilot dataset
 
 Run: `python train.py` (all four feature sets) → `python summary.py` → `python plots.py`.
